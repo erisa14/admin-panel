@@ -1,9 +1,13 @@
-import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 import TabPanel from "../../components/TabPanel";
 import { DataGrid } from "@mui/x-data-grid";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import { useState } from "react";
+import OverviewChart from "./OverviewChart";
+import TopVideosList from "./TopVideosList";
+import RealtimeChart from "./RealtimeChart";
+import LatestVideoCard from "../../components/LatestVideoCard";
 
 function Analytics(){
   const [value, setValue] = useState(0);
@@ -29,23 +33,26 @@ function Analytics(){
             <Typography variant="h5">
               Your channel got 23,888 views in the last 28 days.
             </Typography>
-            
+            <OverviewChart/>
+            <Divider sx={styles.divider}/>
+            <TopVideosList/>
+          </Box>
+          <Box>
+            <RealtimeChart/>
+            <LatestVideoCard/>
           </Box>
         </Box>
        
       </TabPanel>
       <TabPanel value={value} index={1}>
-      <Typography>Test2</Typography>
-
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-      <Typography>Test3</Typography>
-        
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-      <Typography>Test4</Typography>
-
-      </TabPanel>
+            <TopVideosList/>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+            <Typography>Audience</Typography>
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+            <Typography>Revenue</Typography>
+        </TabPanel>
   </Box>
   )
 }
@@ -56,6 +63,21 @@ function Analytics(){
 const styles = {
   pageTitle: {
     mb: 2,
+  },
+  overviewContainer:{
+    display: 'grid',
+    gridTemplateColumns: {'md': '1fr', 'lg': '1fr 300px'},
+    gap: 2,
+    justifyContent: 'center'
+  },
+  statsContainer:{
+    bgcolor: 'neutral.light',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column'
+  },
+  divider:{
+    my:4
   },
 };
 

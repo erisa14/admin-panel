@@ -65,7 +65,7 @@ const columns = [
 const videos = [
   {
     id: 1,
-    thumbnail: '/src/assets/thumbnail.png',
+    thumbnail: "/src/assets/thumbnail.png",
     visibility: "Public",
     monetization: "On",
     views: 100,
@@ -73,7 +73,7 @@ const videos = [
   },
   {
     id: 2,
-    thumbnail: 'src/assets/thumbnail2.png',
+    thumbnail: "src/assets/thumbnail2.png",
     visibility: "Public",
     monetization: "On",
     views: 100,
@@ -84,7 +84,7 @@ const videos = [
 const posts = [
   {
     id: 1,
-    thumbnail: 'src/assets/thumbnail2.png',
+    thumbnail: "src/assets/thumbnail2.png",
     visibility: "Public",
     monetization: "On",
     views: 100,
@@ -92,7 +92,7 @@ const posts = [
   },
   {
     id: 2,
-    thumbnail: 'src/assets/thumbnail2.png',
+    thumbnail: "src/assets/thumbnail2.png",
     visibility: "Public",
     monetization: "On",
     views: 100,
@@ -100,7 +100,7 @@ const posts = [
   },
   {
     id: 3,
-    thumbnail: 'src/assets/thumbnail.png',
+    thumbnail: "src/assets/thumbnail.png",
     visibility: "Public",
     monetization: "On",
     views: 100,
@@ -111,7 +111,7 @@ const posts = [
 const playlists = [
   {
     id: 1,
-    thumbnail: 'src/assets/thumbnail.png',
+    thumbnail: "src/assets/thumbnail.png",
     visibility: "Public",
     monetization: "On",
     views: 100,
@@ -132,8 +132,12 @@ function Content() {
         Content
       </Typography>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-      <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-      <Tab label="Videos" id="tab-0" />
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label="Videos" id="tab-0" />
           <Tab label="Posts" id="tab-1" />
           <Tab label="Playlists" id="tab-2" />
           <Tab label="Lives" id="tab-3" />
