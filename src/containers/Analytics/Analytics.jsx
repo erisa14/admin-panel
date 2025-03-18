@@ -1,8 +1,5 @@
 import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 import TabPanel from "../../components/TabPanel";
-import { DataGrid } from "@mui/x-data-grid";
-import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
-import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import { useState } from "react";
 import OverviewChart from "./OverviewChart";
 import TopVideosList from "./TopVideosList";
@@ -31,7 +28,7 @@ function Analytics(){
         <Box sx={styles.overviewContainer}>
           <Box sx={styles.statsContainer}>
             <Typography variant="h5">
-              Your channel got 23,888 views in the last 28 days.
+              Your channel got 33,111 views in the last 28 days.
             </Typography>
             <OverviewChart/>
             <Divider sx={styles.divider}/>
@@ -56,7 +53,6 @@ function Analytics(){
   </Box>
   )
 }
-
 
 
 /** @type {import ("@mui/material").SxProps} */
